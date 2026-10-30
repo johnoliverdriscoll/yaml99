@@ -1,0 +1,6 @@
+[submodule "src/sio99"]
+	path = src/sio99
+	url = https://github.com/johnoliverdriscoll/sio99
+[submodule "src/utf99"]
+	path = src/utf99
+	url = https://github.com/johnoliverdriscoll/utf99

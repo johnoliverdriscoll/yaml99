@@ -1,0 +1,16 @@
+add_executable(test_yaml test_yaml.c)
+yaml_target_defaults(test_yaml)
+target_link_libraries(test_yaml PRIVATE yaml99)
+add_test(NAME yaml COMMAND test_yaml)
+
+if(YAML99_WITH_HEAP)
+  add_executable(test_heap test_heap.c)
+  yaml_target_defaults(test_heap)
+  target_link_libraries(test_heap PRIVATE yaml99_heap)
+  add_test(NAME heap COMMAND test_heap)
+endif()
+
+add_executable(test_io test_io.c)
+yaml_target_defaults(test_io)
+target_link_libraries(test_io PRIVATE yaml99)
+add_test(NAME io COMMAND test_io)

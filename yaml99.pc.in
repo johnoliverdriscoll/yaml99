@@ -1,0 +1,11 @@
+prefix=@CMAKE_INSTALL_PREFIX@
+libdir=@CMAKE_INSTALL_FULL_LIBDIR@
+includedir=@CMAKE_INSTALL_FULL_INCLUDEDIR@
+
+Name: yaml99
+Description: An allocation-free StrictYAML parser for C99
+Version: @PROJECT_VERSION@
+Requires: sio99 utf99
+Libs: -L"${libdir}" @YAML99_PKGCONFIG_LIBS@
+Cflags: -I"${includedir}"
+
